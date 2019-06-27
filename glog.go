@@ -394,18 +394,18 @@ type flushSyncWriter interface {
 }
 
 func PrintConfig() {
-	log.Println("glog3 alsologtostderr2: ", logging.alsoToStderr)
-	log.Println("glog3 v2: ", logging.verbosity)
+	log.Println("glog3 alsologtostderr3: ", logging.alsoToStderr)
+	log.Println("glog3 v3: ", logging.verbosity)
 }
 
 func init() {
-	flag.BoolVar(&logging.toStderr, "logtostderr2", false, "log to standard error instead of files")
-	flag.BoolVar(&logging.alsoToStderr, "alsologtostderr2", false, "log to standard error as well as files")
-	flag.Var(&logging.verbosity, "v2", "log level for V logs")
-	flag.Var(&logging.stderrThreshold, "stderrthreshold2", "logs at or above this threshold go to stderr")
-	flag.Var(&logging.vmodule, "vmodule2", "comma-separated list of pattern=N settings for file-filtered logging")
-	flag.Var(&logging.traceLocation, "log_backtrace_at2", "when logging hits line file:N, emit a stack trace")
-	flag.BoolVar(&logging.nolog, "nolog2", false, "turn off all logging and don't create any files")
+	flag.BoolVar(&logging.toStderr, "logtostderr3", false, "log to standard error instead of files")
+	flag.BoolVar(&logging.alsoToStderr, "alsologtostderr3", false, "log to standard error as well as files")
+	flag.Var(&logging.verbosity, "v3", "log level for V logs")
+	flag.Var(&logging.stderrThreshold, "stderrthreshold3", "logs at or above this threshold go to stderr")
+	flag.Var(&logging.vmodule, "vmodule3", "comma-separated list of pattern=N settings for file-filtered logging")
+	flag.Var(&logging.traceLocation, "log_backtrace_at3", "when logging hits line file:N, emit a stack trace")
+	flag.BoolVar(&logging.nolog, "nolog3", false, "turn off all logging and don't create any files")
 	// Default stderrThreshold is ERROR.
 	logging.stderrThreshold = errorLog
 
