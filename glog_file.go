@@ -39,14 +39,14 @@ var logDirs []string
 
 // If non-empty, overrides the choice of directory in which to write logs.
 // See createLogDirs for the full list of possible destinations.
-var logDir = flag.String("log_dir2", "", "If non-empty, write log files in this directory")
+var logDir = flag.String("log_dir3", "", "If non-empty, write log files in this directory")
 
 func createLogDirs() {
 	if *logDir != "" {
 		logDirs = append(logDirs, *logDir)
 	}
 	logDirs = append(logDirs, os.TempDir())
-	log.Printf("glog2 logDirs: %+v\n", logDirs)
+	log.Printf("glog3 logDirs: %+v\n", logDirs)
 }
 
 var (
@@ -57,7 +57,7 @@ var (
 )
 
 func init() {
-	log.Println("glog2 logDir: ", *logDir)
+	log.Println("glog3 logDir: ", *logDir)
 	h, err := os.Hostname()
 	if err == nil {
 		host = shortHostname(h)
